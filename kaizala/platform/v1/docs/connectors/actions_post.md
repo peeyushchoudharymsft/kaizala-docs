@@ -27,7 +27,6 @@
 | dueDate | Numeric | Yes | Time to complete the job in Hours (Default: 24hrs) |
 
 ####### Sample JSON Request for a Job Action
-
 ```javascript
 {
     actionType:"Job",
@@ -39,7 +38,6 @@
         }
 }
 ```
-
 ###### actionBody for a Survey Action:
 
 | Parameter | Type | Optional? | Description |
@@ -54,7 +52,7 @@
 | Parameter | Type | Optional? | Description |
 | :---: | :---: | :---:	| :--- |
 | title | String | No | Question Title |
-| type | String | No | Has to be one of TEXT MULTIOPTION SINGLEOPTION NUMERIC IMAGE |
+ | type | String | No | Has to be one of TEXT MULTIOPTION SINGLEOPTION NUMERIC IMAGE |
 | options | JSON Object Array | Yes | Options for selection type questions in an array format. Array containing strings of name “title” with the option values. |
 
 ####### Sample JSON Request for a Survey Action
@@ -89,13 +87,14 @@
 | :---: | :---: | :---:	| :--- |
 | mediaId | String | No | GUID from a previous call to /media where you need to upload the attachment  |
 
-####### Sample JSON Request for a Job Action
+####### Sample JSON Request for a Media(Image/Album/Audio/Document) Action
 
 ```javascript
 {
     actionType:"Image",
     actionBody: {
-                mediaId: "853654b2-guid-462d-b709-0c4e43a7083f"
+                mediaResource: "{{generated using /media api}}",
+                caption:"Sample Image Caption"
                 }
 }
 
