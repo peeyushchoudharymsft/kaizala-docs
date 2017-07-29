@@ -87,15 +87,17 @@
 
 | Parameter | Type | Optional? | Description |
 | :---: | :---: | :---:	| :--- |
-| mediaId | String | No | GUID from a previous call to /media where you need to upload the attachment  |
+| mediaResource | String | No | Resource from a previous call to /media where you need to upload the attachment  |
+| caption | String | Yes | Caption to appear on the media in kaizala app |
 
-####### Sample JSON Request for a Job Action
+####### Sample JSON Request for a Media(Image/Album/Audio/Document) Action
 
 ```javascript
 {
     actionType:"Image",
     actionBody: {
-                mediaId: "853654b2-guid-462d-b709-0c4e43a7083f"
+                mediaResource: "{{generated from /media api}}",
+                caption: "Sample image caption"
                 }
 }
 
