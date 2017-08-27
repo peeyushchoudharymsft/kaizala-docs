@@ -11,6 +11,8 @@ Supported file formats are:
 
 Posting media attachments to Kaizala is a two step process. First, you will need to upload the media file to a repository using the /media endpoint and then use the resource URL later to post as an Action inside Kaizala.
 
+Corresponding Mime-type needs to be set for the media. Without this api will throw UnSupportedMedia(415) error. 
+
 ### POST /media
 
     POST https://{api_root}/media
